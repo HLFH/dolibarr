@@ -6,6 +6,7 @@
  * Copyright (C) 2013-2014  Juanjo Menent           <jmenent@2byte.es>
  * Copyright (C) 2014       Marcos García           <marcosgdf@gmail.com>
  * Copyright (C) 2015-2016  Raphaël Doursenaud      <rdoursenaud@gpcsolutions.fr>
+ * Copyright (C) 2023       Gaspard d'Hautefeuille  <gaspard@dhautefeuille.eu>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -171,7 +172,7 @@ if (!function_exists("easter_date")) {
 	print '<img src="../theme/eldy/img/tick.png" alt="Ok" class="valignmiddle"> '.$langs->trans("PHPSupport", "Calendar")."<br>\n";
 }
 
-// Check if Curl is supported
+// Check if Xml is supported
 if (!function_exists("simplexml_load_string")) {
 	$langs->load("errors");
 	print '<img src="../theme/eldy/img/warning.png" alt="Error" class="valignmiddle"> '.$langs->trans("ErrorPHPDoesNotSupport", "Xml")."<br>\n";
@@ -200,7 +201,7 @@ if (empty($_SERVER["SERVER_ADMIN"]) || $_SERVER["SERVER_ADMIN"] != 'doliwamp@loc
 	}
 }
 
-// Check if Curl is supported
+// Check if IMAP is supported
 if (!function_exists("imap_open")) {
 	$langs->load("errors");
 	print '<img src="../theme/eldy/img/warning.png" alt="Error" class="valignmiddle"> '.$langs->trans("ErrorPHPDoesNotSupport", "IMAP")."<br>\n";
